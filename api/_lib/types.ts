@@ -10,6 +10,6 @@ export interface ParsedRequest {
     images: string[];
     widths: string[];
     heights: string[];
-    username: string;
-    profile: string;
+    username: string | string[] | undefined;
+    profile: string | string[] | undefined;
 }
