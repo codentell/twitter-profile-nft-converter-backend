@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500'), linear-gradient(#e66465, #9198e5);
+    background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500'), linear-gradient(#FBBC53, #F49879, #E649E1);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
@@ -8,6 +8,7 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+    
   /* background-color:  hsla(324, 91%, 46%, 1); 
   background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
   background-repeat: no-repeat;

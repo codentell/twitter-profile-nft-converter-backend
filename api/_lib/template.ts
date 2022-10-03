@@ -3,18 +3,20 @@ import { ParsedRequest } from './types';
 
 function getCSS(theme: string, fontSize: string) {
     let background = 'white';
+    let colorMatrix = [['#FBBC53', '#F49879', '#E649E1'], ['#c2f589', '#77d4ad', '#3aa4a4'], ['#b674ed', '#5f5def', '#6ebceb']];
+    let colors = colorMatrix[Math.floor(Math.random() * colorMatrix.length)]
     let themeBackground = "https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500";
     if(theme === "thirdweb"){
         themeBackground = "https://pbs.twimg.com/profile_banners/1382854043433783296/1654550853/1500x500";
     }
-    if (theme === 'dark') {
-        background = 'black';
+    if (theme === 'buildspace') {
+        themeBackground = "https://pbs.twimg.com/profile_banners/1422255111422754816/1632075252/1500x500";
     }
     return `
 
     body {
         background: ${background};
-        background-image: url('${themeBackground}'), linear-gradient(#e66465, #9198e5);
+        background-image: url('${themeBackground}'), linear-gradient(${colors[0]}, ${colors[1]}, ${colors[2]});
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
