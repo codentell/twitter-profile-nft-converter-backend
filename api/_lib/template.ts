@@ -3,12 +3,12 @@ import { ParsedRequest } from './types';
 
 function getCSS(theme: string, fontSize: string) {
     // let background = 'white';
-    //let foreground = 'black';
+    let foreground = 'black';
     //let radial = 'lightgray';
 
     if (theme === 'dark') {
         //background = 'black';
-        //foreground = 'white';
+        foreground = 'white';
         //radial = 'dimgray';
     }
     return `
