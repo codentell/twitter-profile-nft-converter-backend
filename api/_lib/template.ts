@@ -4,17 +4,19 @@ import { ParsedRequest } from './types';
 function getCSS(theme: string, fontSize: string) {
     let background = 'white';
     let foreground = 'black';
-
+    let themeBackground = "https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500";
+    if(theme === "thirdweb"){
+        themeBackground = "https://pbs.twimg.com/profile_banners/1382854043433783296/1654550853/1500x500";
+    }
     if (theme === 'dark') {
         background = 'black';
         foreground = 'white';
-
     }
     return `
 
     body {
         background: ${background};
-        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500'), linear-gradient(#e66465, #9198e5);
+        background-image: url('${themeBackground}'), linear-gradient(#e66465, #9198e5);
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
@@ -46,7 +48,7 @@ function getCSS(theme: string, fontSize: string) {
         font-family: 'Inter', sans-serif;
         font-size: ${sanitizeHTML(fontSize)};
         font-style: normal;
-        color: ${foreground};
+        color: white;
         line-height: 1.8;
     }`;
 }
