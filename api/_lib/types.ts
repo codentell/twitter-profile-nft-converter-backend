@@ -10,5 +10,5 @@ export interface ParsedRequest {
     widths: string[];
     heights: string[];
     username: string;
-    profile: string;
+    profile: string[];
 }

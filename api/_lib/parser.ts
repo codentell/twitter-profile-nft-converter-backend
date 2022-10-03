@@ -35,7 +35,7 @@ export function parseRequest(req: IncomingMessage) {
         widths: getArray(widths),
         heights: getArray(heights),
         username: decodeURIComponent(username) || '',
-        profile: profile || '',
+        profile: getArray(profile),
     };
     parsedRequest.images = getDefaultImages(parsedRequest.images, parsedRequest.theme);
     return parsedRequest;
