@@ -1,12 +1,6 @@
-
-import { readFileSync } from 'fs';
 import { sanitizeHtml } from './sanitizer';
 import { ParsedRequest } from './types';
 
-
-const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
-const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
-const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
     let background = 'white';
@@ -19,26 +13,6 @@ function getCss(theme: string, fontSize: string) {
         radial = 'dimgray';
     }
     return `
-    @font-face {
-        font-family: 'Inter';
-        font-style:  normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${rglr}) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Inter';
-        font-style:  normal;
-        font-weight: bold;
-        src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
-    }
-
-    @font-face {
-        font-family: 'Vera';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
-      }
 
     body {
         background: ${background};
@@ -101,7 +75,7 @@ function getCss(theme: string, fontSize: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { theme, fontSize, images, widths, heights, username  } = parsedReq;
+    const { theme, fontSize, images, widths, heights, username, profile  } = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -114,6 +88,7 @@ export function getHtml(parsedReq: ParsedRequest) {
         <div>
             <div class="spacer">
             <div class="logo-wrapper">
+                ${getImage(profile)}
                 ${images.map((img, i) =>
                     getPlusSign(i) + getImage(img, widths[i], heights[i])
                 ).join('')}
@@ -129,7 +104,7 @@ export function getHtml(parsedReq: ParsedRequest) {
 function getImage(src: string, width ='auto', height = '225') {
     return `<img
         class="logo"
-        alt="Generated Image"
+        alt="generated image"
         src="${sanitizeHtml(src)}"
         width="${sanitizeHtml(width)}"
         height="${sanitizeHtml(height)}"
