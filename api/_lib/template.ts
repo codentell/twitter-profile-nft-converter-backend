@@ -15,6 +15,9 @@ function getCSS(theme: string, fontSize: string) {
     body {
         background: ${background};
         background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         height: 1000px;
         display: flex;
         text-align: center;
