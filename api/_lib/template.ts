@@ -2,14 +2,14 @@ import { sanitizeHTML } from './sanitizer';
 import { ParsedRequest } from './types';
 
 function getCSS(theme: string, fontSize: string) {
-    let background = 'white';
-    let foreground = 'black';
-    let radial = 'lightgray';
+    // let background = 'white';
+    //let foreground = 'black';
+    //let radial = 'lightgray';
 
     if (theme === 'dark') {
-        background = 'black';
-        foreground = 'white';
-        radial = 'dimgray';
+        //background = 'black';
+        //foreground = 'white';
+        //radial = 'dimgray';
     }
     return `
 
