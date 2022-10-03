@@ -14,25 +14,17 @@ function getCSS(theme: string, fontSize: string) {
     return `
 
     body {
-        background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
+        background-color:  hsla(324, 91%, 46%, 1); 
+        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
-    }
-
-    code {
-        color: #D400FF;
-        font-family: 'Vera';
-        white-space: pre-wrap;
-        letter-spacing: -5px;
-    }
-
-    code:before, code:after {
-        content: '\`';
+        
     }
 
     .logo-wrapper {
