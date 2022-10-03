@@ -4,18 +4,17 @@ import { ParsedRequest } from './types';
 function getCSS(theme: string, fontSize: string) {
     let background = 'white';
     let foreground = 'black';
-    let radial = 'lightgray';
 
     if (theme === 'dark') {
         background = 'black';
         foreground = 'white';
-        radial = 'dimgray';
+
     }
     return `
 
     body {
         background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
+        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
         background-size: 100px 100px;
         height: 100vh;
         display: flex;

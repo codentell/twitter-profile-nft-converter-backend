@@ -5,7 +5,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   box-sizing: border-box;
-  background-color:  hsla(324, 91%, 46%, 1); 
+  background: red;
+  background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
+  background-size: 100px 100px;
+  /* background-color:  hsla(324, 91%, 46%, 1); 
   background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
   background-repeat: no-repeat;
   background-position-x: center;
@@ -14,5 +17,5 @@ body {
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
