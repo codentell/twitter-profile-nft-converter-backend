@@ -60,7 +60,7 @@ function getCSS(theme: string, fontSize: string) {
     }`;
 }
 
-export function getHtml(parsedReq: ParsedRequest) {
+export function getHTML(parsedReq: ParsedRequest) {
     const { theme, fontSize, username, profile  } = parsedReq;
     return `<!DOCTYPE html>
 <html>
