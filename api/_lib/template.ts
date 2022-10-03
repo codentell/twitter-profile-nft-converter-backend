@@ -12,8 +12,7 @@ function getCSS(theme: string, fontSize: string) {
     return `
 
     body {
-        background-color:  hsla(324, 91%, 46%, 1); 
-        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
+        background-color:  hsla(324, 91%, 46%, 1);
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
