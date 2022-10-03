@@ -7,7 +7,16 @@ body {
   box-sizing: border-box;
   background: red;
   background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
-  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-items: center;
+  height: 100vh;
+  justify-items: center;
+  justify-content: center; 
   /* background-color:  hsla(324, 91%, 46%, 1); 
   background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
   background-repeat: no-repeat;
