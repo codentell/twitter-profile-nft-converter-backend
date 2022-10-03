@@ -14,7 +14,7 @@ function getCSS(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
+        background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500'), linear-gradient(#e66465, #9198e5);
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: center;
@@ -35,10 +35,11 @@ function getCSS(theme: string, fontSize: string) {
 
     .logo {
         margin: 0 75px;
+        border-radius: 100%;
     }
 
     .spacer {
-        margin: 150px;
+        margin: 50px;
     }
 
     .heading {

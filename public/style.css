@@ -1,22 +1,13 @@
 body {
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  margin: 20px;
-  overflow-x: hidden;
-  padding: 0;
-  box-sizing: border-box;
-  background: red;
-  background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  align-items: center;
-  height: 1100px;
-  justify-items: center;
-  justify-content: center; 
+    background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500'), linear-gradient(#e66465, #9198e5);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    height: 1000px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   /* background-color:  hsla(324, 91%, 46%, 1); 
   background-image: url('https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500');
   background-repeat: no-repeat;
@@ -28,3 +19,29 @@ body {
   align-items: center;
   justify-content: center; */
 }
+
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.logo {
+    margin: 0 75px;
+    border-radius: 100%;
+}
+
+.spacer {
+    margin: 50px;
+}
+
+.heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    color: white;
+    line-height: 1.8;
+};
