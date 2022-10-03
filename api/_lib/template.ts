@@ -2,26 +2,26 @@ import { sanitizeHTML } from './sanitizer';
 import { ParsedRequest } from './types';
 
 function getCSS(theme: string, fontSize: string) {
+    let background = 'white';
     let foreground = 'black';
-
+    let radial = 'lightgray';
 
     if (theme === 'dark') {
+        background = 'black';
         foreground = 'white';
-
+        radial = 'dimgray';
     }
     return `
 
     body {
-        background-color:  hsla(324, 91%, 46%, 1);
-        background-repeat: no-repeat;
-        background-position-x: center;
-        background-position-y: center;
+        background: ${background};
+        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
+        background-size: 100px 100px;
         height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
-        
     }
 
     .logo-wrapper {
