@@ -3,14 +3,12 @@ import { ParsedRequest } from './types';
 
 function getCSS(theme: string, fontSize: string) {
     let background = 'white';
-    let foreground = 'black';
     let themeBackground = "https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500";
     if(theme === "thirdweb"){
         themeBackground = "https://pbs.twimg.com/profile_banners/1382854043433783296/1654550853/1500x500";
     }
     if (theme === 'dark') {
         background = 'black';
-        foreground = 'white';
     }
     return `
 
