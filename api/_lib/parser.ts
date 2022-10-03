@@ -28,7 +28,7 @@ export function parseRequest(req: IncomingMessage) {
 
     const parsedRequest: ParsedRequest = {
         fileType: extension === 'jpeg' ? extension : 'png',
-        theme: theme,
+        theme: getArray(theme),
         md: md === '1' || md === 'true',
         fontSize: fontSize || '96px',
         images: getArray(images),

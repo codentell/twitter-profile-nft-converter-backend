@@ -59,7 +59,7 @@ export function getHTML(parsedReq: ParsedRequest) {
     <title>Generated Twitter Profile NFT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        ${getCSS(theme, fontSize)}
+        ${getCSS(theme[0], fontSize)}
     </style>
     <body>
         <div>

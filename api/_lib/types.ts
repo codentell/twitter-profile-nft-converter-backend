@@ -3,7 +3,7 @@ export type FileType = 'png' | 'jpeg';
 
 export interface ParsedRequest {
     fileType: FileType;
-    theme: string;
+    theme: string[];
     md: boolean;
     fontSize: string;
     images: string[];
