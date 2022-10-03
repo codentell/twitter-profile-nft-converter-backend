@@ -1,8 +1,7 @@
-import { sanitizeHtml } from './sanitizer';
+import { sanitizeHTML } from './sanitizer';
 import { ParsedRequest } from './types';
 
-
-function getCss(theme: string, fontSize: string) {
+function getCSS(theme: string, fontSize: string) {
     let background = 'white';
     let foreground = 'black';
     let radial = 'lightgray';
@@ -48,26 +47,13 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 75px;
     }
 
-    .plus {
-        color: #BBB;
-        font-family: Times New Roman, Verdana;
-        font-size: 100px;
-    }
-
     .spacer {
         margin: 150px;
     }
 
-    .emoji {
-        height: 1em;
-        width: 1em;
-        margin: 0 .05em 0 .1em;
-        vertical-align: -0.1em;
-    }
-    
     .heading {
         font-family: 'Inter', sans-serif;
-        font-size: ${sanitizeHtml(fontSize)};
+        font-size: ${sanitizeHTML(fontSize)};
         font-style: normal;
         color: ${foreground};
         line-height: 1.8;
@@ -75,26 +61,24 @@ function getCss(theme: string, fontSize: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { theme, fontSize, images, widths, heights, username, profile  } = parsedReq;
+    const { theme, fontSize, username, profile  } = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
-    <title>Generated Image</title>
+    <title>Generated Twitter Profile NFT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        ${getCss(theme, fontSize)}
+        ${getCSS(theme, fontSize)}
     </style>
     <body>
         <div>
             <div class="spacer">
             <div class="logo-wrapper">
                 ${getImage(profile[0])}
-                ${images.map((img, i) =>
-                    getPlusSign(i) + getImage(img, widths[i], heights[i])
-                ).join('')}
             </div>
             <div class="spacer">
-            <div class="heading">${sanitizeHtml(username)}
+            <div class="heading">
+                ${sanitizeHTML(username)}
             </div>
         </div>
     </body>
@@ -105,12 +89,10 @@ function getImage(src: string, width ='auto', height = '225') {
     return `<img
         class="logo"
         alt="generated image"
-        src="${sanitizeHtml(src)}"
-        width="${sanitizeHtml(width)}"
-        height="${sanitizeHtml(height)}"
+        src="${sanitizeHTML(src)}"
+        width="${sanitizeHTML(width)}"
+        height="${sanitizeHTML(height)}"
     />`
 }
 
-function getPlusSign(i: number) {
-    return i === 0 ? '' : '<div class="plus">+</div>';
-}
+
