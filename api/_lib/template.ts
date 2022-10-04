@@ -14,9 +14,9 @@ function getCSS(theme: string, fontSize: string) {
     } else if(theme === "corgis") {
         themeBackground = "https://pbs.twimg.com/profile_banners/1452393448628129792/1645558066/1500x500"
     } else if(theme === "avatar") {
-        themeBackground === "https://pbs.twimg.com/profile_banners/1366011468911497216/1651998820/1500x500"
+        themeBackground = "https://pbs.twimg.com/profile_banners/1366011468911497216/1651998820/1500x500"
     } else if(theme === "dev") {
-        themeBackground === "https://pbs.twimg.com/profile_banners/1433793310703898629/1654088763/1500x500"
+        themeBackground = "https://pbs.twimg.com/profile_banners/1433793310703898629/1654088763/1500x500"
     }
     return `
 
