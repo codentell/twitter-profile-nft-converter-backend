@@ -7,7 +7,7 @@ function getCSS(theme: string, fontSize: string) {
     let colors = colorMatrix[Math.floor(Math.random() * colorMatrix.length)]
     let themeBackground = "https://pbs.twimg.com/profile_banners/1382854043433783296/1654550853/1500x500"; 
     if(theme === "darkcomic"){
-        themeBackground = "https://pbs.twimg.com/profile_banners/1382854043433783296/1654550853/1500x500";
+        themeBackground = "https://pbs.twimg.com/profile_banners/841458289191747585/1637644132/1500x500";
     }
     else if (theme === 'buildspace') {
         themeBackground = "https://pbs.twimg.com/profile_banners/1422255111422754816/1632075252/1500x500";
